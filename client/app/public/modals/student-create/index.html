@@ -1,0 +1,68 @@
+<template name="publicModalStudentCreate"> 
+  {{#let _classId=(appUtil.temp.get 'classId')}}
+    <div class="modal" id="brdPublicModalStudentCreateModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Add Student</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          {{#with _classId}}
+            <div class="modal-body">
+
+              <form id="brdPublicModalStudentCreateForm">
+
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="brdPublicModalStudentCreateName" name="name" required placeholder=" ">
+                  <label for="brdPublicModalStudentCreateName">Name</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="brdPublicModalStudentCreateSurname" name="surname" placeholder=" ">
+                  <label for="brdPublicModalStudentCreateSurname">Surname</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="brdPublicModalStudentCreateSchoolNumber" name="schoolNumber" placeholder=" ">
+                  <label for="brdPublicModalStudentCreateSchoolNumber">School Number</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="brdPublicModalStudentCreateAge" name="age" placeholder=" ">
+                  <label for="brdPublicModalStudentCreateAge">Age</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="brdPublicModalStudentCreateLength" name="length" placeholder=" ">
+                  <label for="brdPublicModalStudentCreateLenght">Length</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="brdPublicModalStudentCreateWeight" name="weight" placeholder=" ">
+                  <label for="brdPublicModalStudentCreateWeight">Weight</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="brdPublicModalStudentCreateStatus" name="status" placeholder=" ">
+                  <label for="brdPublicModalStudentCreateStatus">Durum</label>
+                </div>
+              
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="brdPublicModalStudentCreateAttendanceAt" name="attendanceAt" placeholder=" ">
+                  <label for="brdPublicModalStudentCreateAttendanceAt">Tarih</label>
+                </div>
+
+              </form>
+
+            </div>
+          {{/with}}
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" form="brdPublicModalStudentCreateForm" class="btn btn-primary">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  {{/let}}
+</template>
